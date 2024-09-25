@@ -9,6 +9,7 @@ import displayResume from './DisplayResume.jsx';
 
 export default function EditResume()
 {
+    return (
     createRoot(document.getElementById("root")).render(
         <StrictMode>
           <ContactInfo />
@@ -17,5 +18,5 @@ export default function EditResume()
           <EducationExperience />
           <button onClick={displayResume}>Submit Resume</button>
         </StrictMode>
-      );
+      ));
 }
