@@ -4,16 +4,21 @@
 import { useState } from "react";
 
 export default function ContactInfo() {
-  const hello = () => {
-    alert("Hello Amal!");
+  const submitContactInfo = (formSubmission) => {
+    formSubmission.preventDefault();
+    const fullName = formSubmission.target.elements.fullName.value;
+    const email = formSubmission.target.elements.email.value;
+    const phone = formSubmission.target.elements.phone.value;
+    console.log(fullName, email, phone);
   };
+
 
   return (
     <div>
       <h1>Contact Info</h1>
 
       <>
-        <form>
+        <form action={submitContactInfo}>
           <ul>
             <li>
               <label htmlFor="fullName">Full Name: </label>
@@ -27,10 +32,12 @@ export default function ContactInfo() {
               <label htmlFor="phone">Phone: </label>
               <input type="number" id="phone" name="phone"></input>
             </li>
-            {/* <button type="button"
-            onClick={hello}
-            >Submit Contact Info</button> */}
-            <li></li>
+            <button type="submit"
+            // onClick={submitContactInfo}
+            >Submit Contact Info</button>
+            <li>
+              
+            </li>
           </ul>
         </form>
       </>

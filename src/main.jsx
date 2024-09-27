@@ -10,8 +10,20 @@ import DisplayResume from "./components/DisplayResume.jsx";
 
 import "./styles/index.css";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <EditResume />
-  </StrictMode>
-);
+const container = document.getElementById("root");
+export const root = createRoot(container);
+root.render(<DisplayResume />);
+
+ 
+export function SetDisplay(displayName)
+{
+if (displayName == "EditResume")
+{
+root.render(<EditResume />);
+}
+
+else if (displayName == "DisplayResume")
+{
+root.render(<DisplayResume />);
+}
+}
