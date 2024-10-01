@@ -1,4 +1,5 @@
 import { StrictMode } from "react";
+import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import ContactInfo from "./components/ContactInfo.jsx";
 // import CareerProfile from "./components/CareerProfile.jsx";
@@ -12,18 +13,17 @@ import "./styles/index.css";
 
 const container = document.getElementById("root");
 export const root = createRoot(container);
-root.render(<DisplayResume />);
-
- 
-export function SetDisplay(displayName)
-{
-if (displayName == "EditResume")
-{
 root.render(<EditResume />);
-}
 
-else if (displayName == "DisplayResume")
-{
-root.render(<DisplayResume />);
-}
-}
+// export function SetDisplay(displayName)
+// {
+// if (displayName == "EditResume")
+// {
+// root.render(<EditResume />);
+// }
+
+// else if (displayName == "DisplayResume")
+// {
+// root.render(<DisplayResume />);
+// }
+// }

@@ -1,7 +1,7 @@
 // This Component will display the User Submitted resume
 
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// import { StrictMode } from "react";
+// import { createRoot } from "react-dom/client";
 import ContactInfo from "./ContactInfo.jsx";
 import CareerProfile from "./CareerProfile.jsx";
 import ProfessionalExperience from "./ProfessionalExperience.jsx";
@@ -17,7 +17,7 @@ export default function DisplayResume() {
       <EducationExperience />
 
       <h1>Display Resume</h1>
-      <button onClick={EditResume}>Edit Resume</button>
+      {/* <button onClick={EditResume}>Edit Resume</button> */}
     </>
   );
 }
