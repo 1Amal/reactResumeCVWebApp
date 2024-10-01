@@ -9,12 +9,13 @@ import { changeDisplay } from "../main.jsx";
 import { useState } from "react";
 
 export default function EditResume() {
-  const [displayState, setDisplay] = useState("DisplayResume");
+  const [displayState, setDisplay] = useState("EditResume");
 
   const displayResume = () => {
     console.log(displayState);
     setDisplay("DisplayResume");
     changeDisplay(displayState);
+    console.log(displayState);
   };
 
   return (
