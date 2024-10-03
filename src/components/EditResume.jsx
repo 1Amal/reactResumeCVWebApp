@@ -4,7 +4,6 @@ import CareerProfile from "./CareerProfile.jsx";
 import ProfessionalExperience from "./ProfessionalExperience.jsx";
 import EducationExperience from "./EducationExperience.jsx";
 import displayResume from "./DisplayResume.jsx";
-import { changeDisplay } from "../main.jsx";
 
 import { useState } from "react";
 

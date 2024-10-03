@@ -7,7 +7,6 @@ import EducationExperience from "./EducationExperience.jsx";
 import EditResume from "./EditResume";
 
 import { useState } from "react";
-import { changeDisplay } from "../main.jsx";
 
 export default function DisplayResume() {
   const [displayState, setDisplay] = useState("DisplayResume");
@@ -15,7 +14,7 @@ export default function DisplayResume() {
   const editResume = () => {
     console.log(displayState);
     setDisplay("EditResume");
-    changeDisplay(displayState);
+    // changeDisplay(displayState);
     console.log(displayState);
   };
 
