@@ -7,23 +7,17 @@ import displayResume from "./DisplayResume.jsx";
 
 import { useState } from "react";
 
-export default function EditResume() {
-  const [displayState, setDisplay] = useState("EditResume");
-
-  const displayResume = () => {
-    console.log(displayState);
-    setDisplay("DisplayResume");
-    changeDisplay(displayState);
-    console.log(displayState);
-  };
-
+export default function EditResume({ onNavigate }) {
   return (
     <>
       <ContactInfo />
       <CareerProfile />
       <ProfessionalExperience />
       <EducationExperience />
-      <button onClick={displayResume}>Submit Resume</button>
+      <button onClick={() => onNavigate("DisplayResume")}>View Resume</button>
+      <button
+      onClick={()=>onNavigate('Welcome')}
+      >Start Again</button>
     </>
   );
 }

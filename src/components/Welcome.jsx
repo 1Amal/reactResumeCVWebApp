@@ -2,21 +2,12 @@
 import { useState } from "react";
 import EditResume from "./EditResume";
 
-export default function Welcome() {
-  const [displayState, setDisplay] = useState("DisplayResume");
-
-  const editResume = () => {
-    console.log(displayState);
-    setDisplay("EditResume");
-    // changeDisplay(displayState);
-    console.log(displayState);
-  };
-
+export default function Welcome({ onNavigate }) {
   return (
     <div>
       <h1>Welcome</h1>
       <p>This App will let you create a CV/résumé</p>
-      <button onClick={editResume}>Get Started</button>
+      <button onClick={() => onNavigate("EditResume")}>Create Resume</button>
     </div>
   );
 }

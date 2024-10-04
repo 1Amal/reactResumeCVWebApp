@@ -12,7 +12,6 @@ export default function ContactInfo() {
     console.log(fullName, email, phone);
   };
 
-
   return (
     <div>
       <h1>Contact Info</h1>
@@ -32,12 +31,13 @@ export default function ContactInfo() {
               <label htmlFor="phone">Phone: </label>
               <input type="number" id="phone" name="phone"></input>
             </li>
-            <button type="submit"
-            // onClick={submitContactInfo}
-            >Submit Contact Info</button>
-            <li>
-              
-            </li>
+            <button
+              type="submit"
+              // onClick={submitContactInfo}
+            >
+              Submit Contact Info
+            </button>
+            <li></li>
           </ul>
         </form>
       </>
