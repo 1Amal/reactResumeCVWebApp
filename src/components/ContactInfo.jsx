@@ -2,6 +2,7 @@
 //  email and phone number.
 
 import { useState } from "react";
+import DisplayResume from "./DisplayResume";
 
 export default function ContactInfo() {
   const [formSubmited, setFormSubmit] = useState(false);
@@ -18,9 +19,17 @@ export default function ContactInfo() {
     console.log(formData);
   };
 
+  const callDisplayResume=()=>{
+    <DisplayResume formData={formData}/>
+    // alert("Hey")
+  }
+
   return (
     <div>
       <h1>Contact Info</h1>
+      <h2>{formData.fullName}</h2>
+      <p>@: {formData.eMail} Phone: {formData.phoneNo}</p>
+      
 
       <>
         <form onSubmit={submitContactInfo}>
@@ -64,10 +73,11 @@ export default function ContactInfo() {
                 }
               ></input>
             </li>
-            <button type="submit" onClick={submitContactInfo}>
+            <button type="submit" onClick={callDisplayResume}>
               Submit Contact Info
             </button>
             <li></li>
+            
           </ul>
         </form>
       </>

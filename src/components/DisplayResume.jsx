@@ -8,12 +8,15 @@ import EditResume from "./EditResume";
 
 import { useState } from "react";
 
-export default function DisplayResume({ onNavigate }) {
+export default function DisplayResume({ onNavigate },{formData}) {
   return (
     <>
+      {/* <ContactInfo formData={formData}/> */}
+      {/* {formData} */}
       <CareerProfile />
       <ProfessionalExperience />
       <EducationExperience />
+      {console.log(formData)}
 
       <h1>Display Resume</h1>
       <button onClick={() => onNavigate("EditResume")}>Edit Resume</button>
