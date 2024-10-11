@@ -15,9 +15,7 @@ export default function EditResume({ onNavigate }) {
       <ProfessionalExperience />
       <EducationExperience />
       <button onClick={() => onNavigate("DisplayResume")}>View Resume</button>
-      <button
-      onClick={()=>onNavigate('Welcome')}
-      >Start Again</button>
+      <button onClick={() => onNavigate("Welcome")}>Start Again</button>
     </>
   );
 }

@@ -4,12 +4,18 @@
 import { useState } from "react";
 
 export default function ContactInfo() {
+  const [formSubmited, setFormSubmit] = useState(false);
+
+  const [formData, setFormData] = useState({
+    fullName: "Amal",
+    eMail: "amal@amal.com",
+    phoneNo: "111111111",
+  });
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
-    const fullName = formSubmission.target.elements.fullName.value;
-    const email = formSubmission.target.elements.email.value;
-    const phone = formSubmission.target.elements.phone.value;
-    console.log(fullName, email, phone);
+
+    setFormSubmit(true);
+    console.log(formData);
   };
 
   return (
@@ -17,24 +23,48 @@ export default function ContactInfo() {
       <h1>Contact Info</h1>
 
       <>
-        <form action={submitContactInfo}>
+        <form onSubmit={submitContactInfo}>
           <ul>
             <li>
               <label htmlFor="fullName">Full Name: </label>
-              <input type="text" id="fullName" name="fullName"></input>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={(setFullName) =>
+                  setFormData({
+                    ...formData,
+                    fullName: setFullName.target.value,
+                  })
+                }
+              ></input>
             </li>
             <li>
               <label htmlFor="email">E-mail: </label>
-              <input type="email" id="email" name="email"></input>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.eMail}
+                onChange={(setEmail) =>
+                  setFormData({ ...formData, eMail: setEmail.target.value })
+                }
+              ></input>
             </li>
             <li>
               <label htmlFor="phone">Phone: </label>
-              <input type="number" id="phone" name="phone"></input>
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                value={formData.phoneNo}
+                onChange={(setPhoneNo) =>
+                  setFormData({ ...formData, phoneNo: setPhoneNo.target.value })
+                }
+              ></input>
             </li>
-            <button
-              type="submit"
-              // onClick={submitContactInfo}
-            >
+            <button type="submit" onClick={submitContactInfo}>
               Submit Contact Info
             </button>
             <li></li>
