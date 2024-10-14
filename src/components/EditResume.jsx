@@ -14,30 +14,39 @@ export default function EditResume({ onNavigate }) {
   const [formData, setFormData] = useState({
     fullName: "Amal",
     eMail: "amal@amal.com",
-    phoneNo: "111111111",
+    mobile: "111111111",
+    webSite: "www.1amal.github.io",
+    location: "Melbourne",
+    profSummary: "Front End Engineer",
+    skills1: "Skills Summary 1",
+    skills2: "Skills Summary 2",
+    courseName: "Course Name",
+    courseCompletionDate: "Course Completion",
+    jobTitle: "",
+    jobCompanyName: "",
+    jobCompanyCity: "",
+    jobStartDate: "",
+    jobEndDate: "",
+    jobResponsibilities: "",
+    jobAchievements: "",
+    refereeDetails: "",
   });
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
 
     // <DisplayResume />;
-    setFormSubmit(true);
     console.log(formData);
   };
 
   const callDisplayResume = () => {
-    <EducationExperience formData={{ test: 1 }} />;
+    // <EducationExperience formData={{ test: 1 }} />;
+
+    // <DisplayResume/>
+    // setFormSubmit(true);
+
+    onNavigate("DisplayResume");
+    console.log("callDisplayResume Function Called");
   };
-
-  // return (
-  //   <div>
-  //     <h1>Contact Info</h1>
-  //     <h2>{formData.fullName}</h2>
-  //     <p>
-  //       @: {formData.eMail} Phone: {formData.phoneNo}
-  //     </p>
-
-  //   </div>
-  // );
 
   return (
     <div>
@@ -79,28 +88,52 @@ export default function EditResume({ onNavigate }) {
                   type="number"
                   id="phone"
                   name="phone"
-                  value={formData.phoneNo}
+                  value={formData.mobile}
                   onChange={(setPhoneNo) =>
                     setFormData({
                       ...formData,
-                      phoneNo: setPhoneNo.target.value,
+                      mobile: setPhoneNo.target.value,
                     })
                   }
                 ></input>
               </li>
-              <button type="submit" onClick={callDisplayResume}>
-                Submit Contact Info
-              </button>
-              <li></li>
+
+              <li>
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={formData.webSite}
+                  // onFocus={this.target.value = ""}
+                  onChange={(setWebSite) =>
+                    setFormData({
+                      ...formData,
+                      webSite: setWebSite.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+              <li>
+                <button type="submit" onClick={callDisplayResume}>
+                  Submit Contact Info
+                </button>
+              </li>
+              <li>
+                {" "}
+                <button
+                  type="button"
+                  onClick={() => onNavigate("DisplayResume")}
+                >
+                  View Resume
+                </button>
+                <button type="button" onClick={() => onNavigate("Welcome")}>
+                  Start Again
+                </button>
+              </li>
             </ul>
           </form>
         </>
-        {/* <ContactInfo /> */}
-        {/* <CareerProfile />
-        <ProfessionalExperience />
-        <EducationExperience /> */}
-        <button onClick={() => onNavigate("DisplayResume")}>View Resume</button>
-        <button onClick={() => onNavigate("Welcome")}>Start Again</button>
       </div>
       <div>
         <DisplayResume />
