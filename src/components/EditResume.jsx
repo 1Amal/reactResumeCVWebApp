@@ -36,6 +36,7 @@ export default function EditResume({ onNavigate }) {
 
     // <DisplayResume />;
     console.log(formData);
+    callDisplayResume();
   };
 
   const callDisplayResume = () => {
@@ -53,7 +54,8 @@ export default function EditResume({ onNavigate }) {
       <div>
         <h1>Edit Resume</h1>
         <>
-          <form onSubmit={submitContactInfo}>
+          <form > 
+            {/* onSubmit={callDisplayResume} */}
             <ul>
               <li>
                 <label htmlFor="fullName">Full Name: </label>
@@ -99,7 +101,7 @@ export default function EditResume({ onNavigate }) {
               </li>
 
               <li>
-                <label htmlFor="website">Website</label>
+                <label htmlFor="website">Website: </label>
                 <input
                   type="text"
                   id="website"
@@ -114,23 +116,52 @@ export default function EditResume({ onNavigate }) {
                   }
                 ></input>
               </li>
+
               <li>
-                <button type="submit" onClick={callDisplayResume}>
-                  Submit Contact Info
+                <label htmlFor="location">Location: </label>
+                <input
+                type="text"
+                id="location"
+                name="location"
+                value={formData.location}
+                onChange={(location)=>setFormData({...formData,location:location.target.value})}
+                >
+                </input>
+                
+                </li>
+
+                {/* <li>
+                <label htmlFor=""></label>
+                <input
+                type="text"
+                id=""
+                name=""
+                value={formData}
+                onChange={(nameOfFormField)=>setFormData({...formData,nameOfValue:nameOfFormField.target.value})}
+                >
+                </input>
+                
+                </li> */}
+
+              <li>
+                <button type="submit" onClick={submitContactInfo}>
+                Submit & View Resume
                 </button>
               </li>
               <li>
-                {" "}
-                <button
+
+                {/* <button
                   type="button"
                   onClick={() => onNavigate("DisplayResume")}
                 >
                   View Resume
-                </button>
+                </button> */}
                 <button type="button" onClick={() => onNavigate("Welcome")}>
                   Start Again
                 </button>
               </li>
+
+
             </ul>
           </form>
         </>
