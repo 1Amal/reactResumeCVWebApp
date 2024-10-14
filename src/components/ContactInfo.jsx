@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import DisplayResume from "./DisplayResume";
+import EducationExperience from "./EducationExperience";
 
 export default function ContactInfo() {
   const [formSubmited, setFormSubmit] = useState(false);
@@ -15,13 +16,16 @@ export default function ContactInfo() {
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
 
+    
+    <DisplayResume/>
     setFormSubmit(true);
     console.log(formData);
   };
 
   const callDisplayResume=()=>{
-    <DisplayResume formData={formData}/>
-    // alert("Hey")
+
+    <EducationExperience formData={{test:1}}/>
+
   }
 
   return (
