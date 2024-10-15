@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import Welcome from "./Welcome.jsx";
 import EditResume from "./EditResume.jsx";
-import ContactInfo from "./ContactInfo.jsx";
 import DisplayResume from "./DisplayResume.jsx";
 
 import "../styles/App.css";

@@ -1,10 +1,10 @@
 // This Component will provide edit fields for the resume
-// import ContactInfo from "./ContactInfo.jsx";
-// import CareerProfile from "./CareerProfile.jsx";
-// import ProfessionalExperience from "./ProfessionalExperience.jsx";
-// import EducationExperience from "./EducationExperience.jsx";
+
+import App from "./App.jsx";
 
 import DisplayResume from "./DisplayResume.jsx";
+
+import ResumeDynamicView from "./ResumeDynamicView.jsx";
 
 import { useState } from "react";
 
@@ -34,27 +34,24 @@ export default function EditResume({ onNavigate }) {
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
 
-    // <DisplayResume />;
-    console.log(formData);
     callDisplayResume();
   };
 
   const callDisplayResume = () => {
-    // <EducationExperience formData={{ test: 1 }} />;
-
-    // <DisplayResume/>
-    // setFormSubmit(true);
+    console.log("callDisplayResume Function Called");
+    console.log(formData);
+    <ResumeDynamicView displayData={formData} />;
 
     onNavigate("DisplayResume");
-    console.log("callDisplayResume Function Called");
   };
 
   return (
     <div>
+      <h1>{formData.fullName}</h1>
       <div>
         <h1>Edit Resume</h1>
         <>
-          <form > 
+          <form>
             {/* onSubmit={callDisplayResume} */}
             <ul>
               <li>
@@ -120,17 +117,20 @@ export default function EditResume({ onNavigate }) {
               <li>
                 <label htmlFor="location">Location: </label>
                 <input
-                type="text"
-                id="location"
-                name="location"
-                value={formData.location}
-                onChange={(location)=>setFormData({...formData,location:location.target.value})}
-                >
-                </input>
-                
-                </li>
+                  type="text"
+                  id="location"
+                  name="location"
+                  value={formData.location}
+                  onChange={(location) =>
+                    setFormData({
+                      ...formData,
+                      location: location.target.value,
+                    })
+                  }
+                ></input>
+              </li>
 
-                {/* <li>
+              {/* <li>
                 <label htmlFor=""></label>
                 <input
                 type="text"
@@ -145,11 +145,10 @@ export default function EditResume({ onNavigate }) {
 
               <li>
                 <button type="submit" onClick={submitContactInfo}>
-                Submit & View Resume
+                  Submit & View Resume
                 </button>
               </li>
               <li>
-
                 {/* <button
                   type="button"
                   onClick={() => onNavigate("DisplayResume")}
@@ -160,15 +159,11 @@ export default function EditResume({ onNavigate }) {
                   Start Again
                 </button>
               </li>
-
-
             </ul>
           </form>
         </>
       </div>
-      <div>
-        <DisplayResume />
-      </div>
+      <div>{/* <ResumeDynamicView displayData={formData}/> */}</div>
     </div>
   );
 }
