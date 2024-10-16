@@ -1,6 +1,4 @@
 // Welcome Page with Instructions
-import { useState } from "react";
-import EditResume from "./EditResume";
 
 export default function Welcome({ onNavigate }) {
   return (

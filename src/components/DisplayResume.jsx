@@ -14,7 +14,8 @@ export default function DisplayResume({ onNavigate }) {
       {console.log("Display resume Data Log")}
       
       
-    <ResumeDynamicView/>
+    {/* <ResumeDynamicView/> */}
+
       {/* <h1>Preview Resume</h1>
         <div>
         <h1>Contact Info</h1> */}

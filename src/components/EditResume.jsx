@@ -1,8 +1,5 @@
 // This Component will provide edit fields for the resume
 
-import App from "./App.jsx";
-
-import DisplayResume from "./DisplayResume.jsx";
 
 import ResumeDynamicView from "./ResumeDynamicView.jsx";
 
@@ -33,14 +30,14 @@ export default function EditResume({ onNavigate }) {
   });
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
-
-    callDisplayResume();
+    <ResumeDynamicView displayData={formData} />;
+    // callDisplayResume();
   };
 
   const callDisplayResume = () => {
     console.log("callDisplayResume Function Called");
     console.log(formData);
-    <ResumeDynamicView displayData={formData} />;
+    
 
     onNavigate("DisplayResume");
   };
@@ -51,8 +48,8 @@ export default function EditResume({ onNavigate }) {
       <div>
         <h1>Edit Resume</h1>
         <>
-          <form>
-            {/* onSubmit={callDisplayResume} */}
+          <form onSubmit={submitContactInfo}>
+            
             <ul>
               <li>
                 <label htmlFor="fullName">Full Name: </label>
@@ -145,16 +142,16 @@ export default function EditResume({ onNavigate }) {
 
               <li>
                 <button type="submit" onClick={submitContactInfo}>
-                  Submit & View Resume
+                  Submit Data
                 </button>
               </li>
               <li>
-                {/* <button
+                <button
                   type="button"
                   onClick={() => onNavigate("DisplayResume")}
                 >
                   View Resume
-                </button> */}
+                </button>
                 <button type="button" onClick={() => onNavigate("Welcome")}>
                   Start Again
                 </button>
@@ -163,7 +160,8 @@ export default function EditResume({ onNavigate }) {
           </form>
         </>
       </div>
-      <div>{/* <ResumeDynamicView displayData={formData}/> */}</div>
+      {/* <div><ResumeDynamicView displayData={formData}/></div> */}
+      {/* <div><ResumeDynamicView/></div> */}
     </div>
   );
 }
