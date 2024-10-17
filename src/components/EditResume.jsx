@@ -19,7 +19,8 @@ export default function EditResume({ onNavigate }) {
     techStackFrameWorks: "React",
     techStackDeveloperTools:
       "Git | Ubuntu GNU/Linux | VS Code | Chrome Developer Tools | NPM | WebPack | Vite | Jest | Babel | ESLint | Prettier | Figma | Jira | Confluence | Discord | Slack",
-    techStackProgrammingConcepts: "",
+    techStackProgrammingConcepts:
+      "TDD | SOLID | DRY | OOP Principles | Clean Code | Unit Testing | WCAG",
     techStackCloud: "Vercel | Cloud Flare Pages | Netlify",
     jobTitle1: "",
     jobCompanyName1: "",
@@ -182,16 +183,19 @@ export default function EditResume({ onNavigate }) {
 
               <li>
                 <h3>Technology Stack</h3>
-                <label htmlFor="techStackProgrammingLanguages">Programming Languages: </label>
+                <label htmlFor="techStackProgrammingLanguages">
+                  Programming Languages:{" "}
+                </label>
                 <input
                   type="text"
                   id="techStackProgrammingLanguages"
                   name="techStackProgrammingLanguages"
-                  value={formData}
+                  value={formData.techStackProgrammingLanguages}
                   onChange={(techStackProgrammingLanguages1) =>
                     setFormData({
                       ...formData,
-                      techStackProgrammingLanguages: techStackProgrammingLanguages1.target.value,
+                      techStackProgrammingLanguages:
+                        techStackProgrammingLanguages1.target.value,
                     })
                   }
                 ></input>
@@ -203,7 +207,7 @@ export default function EditResume({ onNavigate }) {
                   type="text"
                   id="techStackFrameWorks"
                   name="techStackFrameWorks"
-                  value={formData}
+                  value={formData.techStackFrameWorks}
                   onChange={(techStackFrameWorks) =>
                     setFormData({
                       ...formData,
@@ -214,11 +218,20 @@ export default function EditResume({ onNavigate }) {
               </li>
 
               <li>
-              <textarea id="techStackProgrammingConcepts" name="techStackProgrammingConcepts" 
-              // value={formData}
-              onChange={()=>setFormData({...formData,techStackProgrammingConcepts:techStackProgrammingConcepts.target.value})}
-              rows="5" cols="30">
-</textarea>
+                <textarea
+                  id="techStackProgrammingConcepts"
+                  name="techStackProgrammingConcepts"
+                  value={formData.techStackProgrammingConcepts}
+                  onChange={(techStackProgrammingConcepts) =>
+                    setFormData({
+                      ...formData,
+                      techStackProgrammingConcepts:
+                        techStackProgrammingConcepts.target.value,
+                    })
+                  }
+                  rows="5"
+                  cols="30"
+                ></textarea>
               </li>
 
               <li>
@@ -227,7 +240,7 @@ export default function EditResume({ onNavigate }) {
                   type="text"
                   id=""
                   name=""
-                  value={formData}
+                  value={formData.techStackDeveloperTools}
                   onChange={(nameOfFormField) =>
                     setFormData({
                       ...formData,
@@ -252,6 +265,27 @@ export default function EditResume({ onNavigate }) {
                   }
                 ></input>
               </li>
+
+              <li>
+                <label for="techStackProgrammingConcepts">
+                  Programming Concepts:{" "}
+                </label>
+                <textarea
+                  id="techStackProgrammingConcepts"
+                  name="techStackProgrammingConcepts"
+                  value={formData.techStackProgrammingConcepts}
+                  onChange={(techStackProgrammingConcepts) =>
+                    setFormData({
+                      ...formData,
+                      techStackProgrammingConcepts:
+                        techStackProgrammingConcepts.target.value,
+                    })
+                  }
+                  rows="5"
+                  cols="30"
+                ></textarea>
+              </li>
+
               <li>
                 <label htmlFor=""></label>
                 <input
