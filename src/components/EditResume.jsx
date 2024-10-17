@@ -8,24 +8,55 @@ export default function EditResume({ onNavigate }) {
   const [formSubmited, setFormSubmit] = useState(false);
 
   const [formData, setFormData] = useState({
-    fullName: "Amal",
+    fullName: "Amal K",
     eMail: "amal@amal.com",
-    mobile: "111111111",
+    mobile: "0466222222",
     webSite: "www.1amal.github.io",
     location: "Melbourne",
     profSummary: "Front End Engineer",
-    skills1: "Skills Summary 1",
-    skills2: "Skills Summary 2",
-    courseName: "Course Name",
-    courseCompletionDate: "Course Completion",
-    jobTitle: "",
-    jobCompanyName: "",
-    jobCompanyCity: "",
-    jobStartDate: "",
-    jobEndDate: "",
-    jobResponsibilities: "",
-    jobAchievements: "",
-    refereeDetails: "",
+    techStackProgrammingLangues:
+      "JavaScript | CSS (Grid, FlexBox) | HTML | Bash",
+    techStackFrameWorks: "React",
+    techStackDeveloperTools:
+      "Git | Ubuntu GNU/Linux | VS Code | Chrome Developer Tools | NPM | WebPack | Vite | Jest | Babel | ESLint | Prettier | Figma | Jira | Confluence | Discord | Slack",
+    techStackProgrammingConcepts: "",
+    techStackCloud: "Vercel | Cloud Flare Pages | Netlify",
+    jobTitle1: "",
+    jobCompanyName1: "",
+    jobCompanyCity1: "",
+    jobStartDate1: "",
+    jobEndDate1: "",
+    jobResponsibilities1: "",
+    jobAchievements1: "",
+    jobTitle2: "",
+    jobCompanyName2: "",
+    jobCompanyCity2: "",
+    jobStartDate2: "",
+    jobEndDate2: "",
+    jobResponsibilities2: "",
+    jobAchievements2: "",
+    jobTitle3: "",
+    jobCompanyName3: "",
+    jobCompanyCity3: "",
+    jobStartDate3: "",
+    jobEndDate3: "",
+    jobResponsibilities3: "",
+    jobAchievements3: "",
+    courseName1: "Full Stack JavaScript",
+    courseProvider1: "The Odin Project",
+    courseDescription1: "JavaScript, CSS, HTML, Linux",
+    courseCompletionDate1: "Dec 2023",
+    courseName2: "Web Development Foundations",
+    courseProvider2: "The Odin Project",
+    courseDescription2: "JavaScript, CSS, HTML, Linux",
+    courseCompletionDate2: "Dec 2023",
+    courseName3:
+      "Bachelor of Engineering (Honours) Electronic, Telecommunications & Internet Engineering",
+    courseProvider3: "UoB",
+    courseDescription3: "Degree recognised by Engineers Australia",
+    courseCompletionDate3: "2008",
+    refereeDetails1: "Richard Matthew Stallman, rms@gnu.org",
+    refereeDetails2: "Linus Torvalds, linus@linuxfoundation.org",
   });
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
@@ -56,6 +87,7 @@ export default function EditResume({ onNavigate }) {
           <form onSubmit={submitContactInfo}>
             <ul>
               <li>
+                <h3>Contact Info</h3>
                 <label htmlFor="fullName">Full Name: </label>
                 <input
                   type="text"
@@ -131,18 +163,123 @@ export default function EditResume({ onNavigate }) {
                 ></input>
               </li>
 
-              {/* <li>
+              <li>
+                <h3>Professional Summary</h3>
+                <label htmlFor="profSummary"></label>
+                <input
+                  type="text"
+                  id="profSummary"
+                  name="profSummary"
+                  value={formData.profSummary}
+                  onChange={(profSummary) =>
+                    setFormData({
+                      ...formData,
+                      profSummary: profSummary.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <h3>Technology Stack</h3>
                 <label htmlFor=""></label>
                 <input
-                type="text"
-                id=""
-                name=""
-                value={formData}
-                onChange={(nameOfFormField)=>setFormData({...formData,nameOfValue:nameOfFormField.target.value})}
-                >
-                </input>
-                
-                </li> */}
+                  type="text"
+                  id=""
+                  name=""
+                  value={formData}
+                  onChange={(nameOfFormField) =>
+                    setFormData({
+                      ...formData,
+                      nameOfValue: nameOfFormField.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <label htmlFor=""></label>
+                <input
+                  type="text"
+                  id=""
+                  name=""
+                  value={formData}
+                  onChange={(nameOfFormField) =>
+                    setFormData({
+                      ...formData,
+                      nameOfValue: nameOfFormField.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <h3>Professional Experience</h3>
+                <label htmlFor=""></label>
+                <input
+                  type="text"
+                  id=""
+                  name=""
+                  value={formData}
+                  onChange={(nameOfFormField) =>
+                    setFormData({
+                      ...formData,
+                      nameOfValue: nameOfFormField.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <h3>Education and Qualifications</h3>
+                <label htmlFor=""></label>
+                <input
+                  type="text"
+                  id=""
+                  name=""
+                  value={formData}
+                  onChange={(nameOfFormField) =>
+                    setFormData({
+                      ...formData,
+                      nameOfValue: nameOfFormField.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <h3>CPD</h3>
+                <label htmlFor=""></label>
+                <input
+                  type="text"
+                  id=""
+                  name=""
+                  value={formData}
+                  onChange={(nameOfFormField) =>
+                    setFormData({
+                      ...formData,
+                      nameOfValue: nameOfFormField.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <h3>References</h3>
+                <label htmlFor=""></label>
+                <input
+                  type="text"
+                  id=""
+                  name=""
+                  value={formData}
+                  onChange={(nameOfFormField) =>
+                    setFormData({
+                      ...formData,
+                      nameOfValue: nameOfFormField.target.value,
+                    })
+                  }
+                ></input>
+              </li>
 
               <li>
                 <button type="submit" onClick={submitContactInfo}>

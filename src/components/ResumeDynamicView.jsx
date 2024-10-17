@@ -22,7 +22,7 @@ export default function ResumeDynamicView({ displayData, displayData2 }) {
           Update Display
         </button>
 
-        <h1>Resume Dynamic View</h1>
+        <h1>Resume Generated View</h1>
         <div>
           {/* <h1>Contact Info</h1> */}
           <h1>{displayData.fullName}</h1>
@@ -36,10 +36,12 @@ export default function ResumeDynamicView({ displayData, displayData2 }) {
 
         <div>
           <h1>Professional Summary</h1>
+          <p>{displayData.profSummary}</p>
         </div>
 
         <div>
           <h1>Education and Qualifications</h1>
+          
         </div>
 
         <div>
