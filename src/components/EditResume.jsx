@@ -1,6 +1,5 @@
 // This Component will provide edit fields for the resume
 
-
 import ResumeDynamicView from "./ResumeDynamicView.jsx";
 
 import { useState } from "react";
@@ -30,14 +29,20 @@ export default function EditResume({ onNavigate }) {
   });
   const submitContactInfo = (formSubmission) => {
     formSubmission.preventDefault();
-    <ResumeDynamicView displayData={formData} />;
+    <div>
+      <ResumeDynamicView
+        displayData={formData}
+        displayData2={callDisplayResume}
+      />
+    </div>;
+    // <ResumeDynamicView displayData={formData} />;
+
     // callDisplayResume();
   };
 
   const callDisplayResume = () => {
     console.log("callDisplayResume Function Called");
     console.log(formData);
-    
 
     onNavigate("DisplayResume");
   };
@@ -49,7 +54,6 @@ export default function EditResume({ onNavigate }) {
         <h1>Edit Resume</h1>
         <>
           <form onSubmit={submitContactInfo}>
-            
             <ul>
               <li>
                 <label htmlFor="fullName">Full Name: </label>
@@ -160,8 +164,10 @@ export default function EditResume({ onNavigate }) {
           </form>
         </>
       </div>
-      {/* <div><ResumeDynamicView displayData={formData}/></div> */}
-      {/* <div><ResumeDynamicView/></div> */}
+      <div>
+        <ResumeDynamicView displayData={formData} />
+      </div>
+      {/* <div><ResumeDynamicView displayData={submitContactInfo}/></div> */}
     </div>
   );
 }

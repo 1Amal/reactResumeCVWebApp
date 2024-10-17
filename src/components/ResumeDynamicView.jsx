@@ -1,20 +1,28 @@
 // This Component include Dynamic view of the resume
 
-export default function ResumeDynamicView({ displayData }) {
-  
-    console.log("ResumeDynamic displayData Output");
-  
-  
-    console.dir(displayData);
-  
+import { useState } from "react";
+
+export default function ResumeDynamicView({ displayData, displayData2 }) {
+  console.log("ResumeDynamic displayData Output");
+
+  console.dir(displayData);
+
+  const [displayData1, setDisplayData] = useState("test");
+
   // {console.log({onNavigate})}
   return (
     <>
-    
+      <button
+        onClick={() => {
+          displayData2();
+        }}
+      >
+        Update Display
+      </button>
       <h1>Resume Dynamic View</h1>
       <div>
         <h1>Contact Info</h1>
-        <h2>{displayData.fullName}</h2>
+        {/* <h2>{displayData.fullName}</h2> */}
 
         {/* <h2>{displayData.eMail}</h2> */}
         {/* <p>

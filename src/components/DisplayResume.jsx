@@ -4,17 +4,16 @@ import EditResume from "./EditResume";
 
 import { useState } from "react";
 
-import ResumeDynamicView from "./ResumeDynamicView"
+import ResumeDynamicView from "./ResumeDynamicView";
 
 export default function DisplayResume({ onNavigate }) {
   // {console.log({displayData})}
-  {console.log({onNavigate})}
+  // {console.log({onNavigate})}
   return (
     <>
-      {console.log("Display resume Data Log")}
-      
-      
-    {/* <ResumeDynamicView/> */}
+      {console.log("Display resume Data Log1")}
+
+      <ResumeDynamicView />
 
       {/* <h1>Preview Resume</h1>
         <div>
@@ -25,8 +24,8 @@ export default function DisplayResume({ onNavigate }) {
         @: {formData.eMail} Phone: {formData.phoneNo}
       </p> */}
 
-        {/* </div> */}
-{/* 
+      {/* </div> */}
+      {/* 
         <div>
           <h1>Professional Summary</h1>
         </div>
@@ -38,7 +37,6 @@ export default function DisplayResume({ onNavigate }) {
         <div>
           <h1>Professional Experience</h1>
         </div> */}
-
 
       <button onClick={() => onNavigate("EditResume")}>Edit Resume</button>
       <button onClick={() => onNavigate("Welcome")}>Start Again</button>
