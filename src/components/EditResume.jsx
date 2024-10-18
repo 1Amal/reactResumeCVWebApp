@@ -650,23 +650,146 @@ export default function EditResume({ onNavigate }) {
                   ></textarea>
                 </li>
               </div>
+              <div>
+                <li>
+                  <h3>Education and Qualifications</h3>
+                  <label htmlFor="courseName1">Course Name 1: </label>
+                  <input
+                    type="text"
+                    id="courseName1"
+                    name="courseName1"
+                    value={formData.courseName1}
+                    onChange={(courseName1) =>
+                      setFormData({
+                        ...formData,
+                        courseName1: courseName1.target.value,
+                      })
+                    }
+                  ></input>
+                </li>
 
-              <li>
-                <h3>Education and Qualifications</h3>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
-                    setFormData({
-                      ...formData,
-                      nameOfValue: nameOfFormField.target.value,
-                    })
-                  }
-                ></input>
-              </li>
+                <li>
+                  <label htmlFor="courseProvider1">Course Provider 1: </label>
+                  <input
+                    type="text"
+                    id="courseProvider1"
+                    name="courseProvider1"
+                    value={formData.courseProvider1}
+                    onChange={(courseProvider1) =>
+                      setFormData({
+                        ...formData,
+                        courseProvider1: courseProvider1.target.value,
+                      })
+                    }
+                  ></input>
+                </li>
+
+                <li>
+                  <label for="courseDescription1">Course Description 1: </label>
+                  <textarea
+                    id="courseDescription1"
+                    name=""
+                    value={formData.courseDescription1}
+                    onChange={(courseDescription1) =>
+                      setFormData({
+                        ...formData,
+                        courseDescription1: courseDescription1.target.value,
+                      })
+                    }
+                    rows="5"
+                    cols="30"
+                  ></textarea>
+                </li>
+
+                <li>
+                  <label htmlFor="courseCompletionDate1">
+                    Course Completion Date 1:{" "}
+                  </label>
+                  <input
+                    type="text"
+                    id="courseCompletionDate1"
+                    name="courseCompletionDate1"
+                    value={formData.courseCompletionDate1}
+                    onChange={(courseCompletionDate1) =>
+                      setFormData({
+                        ...formData,
+                        courseCompletionDate1:
+                          courseCompletionDate1.target.value,
+                      })
+                    }
+                  ></input>
+                </li>
+              </div>
+
+              <div>
+                <li>
+                  <label htmlFor="courseName2">Course Name 2: </label>
+                  <input
+                    type="text"
+                    id="courseName2"
+                    name="courseName2"
+                    value={formData.courseName2}
+                    onChange={(courseName2) =>
+                      setFormData({
+                        ...formData,
+                        courseName2: courseName2.target.value,
+                      })
+                    }
+                  ></input>
+                </li>
+
+                <li>
+                  <label htmlFor="courseProvider2">Course Provider 2: </label>
+                  <input
+                    type="text"
+                    id="courseProvider2"
+                    name="courseProvider2"
+                    value={formData.courseProvider2}
+                    onChange={(courseProvider2) =>
+                      setFormData({
+                        ...formData,
+                        courseProvider2: courseProvider2.target.value,
+                      })
+                    }
+                  ></input>
+                </li>
+
+                <li>
+                  <label for="courseDescription2">Course Description 2: </label>
+                  <textarea
+                    id="courseDescription2"
+                    name=""
+                    value={formData.courseDescription2}
+                    onChange={(courseDescription2) =>
+                      setFormData({
+                        ...formData,
+                        courseDescription2: courseDescription2.target.value,
+                      })
+                    }
+                    rows="5"
+                    cols="30"
+                  ></textarea>
+                </li>
+
+                <li>
+                  <label htmlFor="courseCompletionDate2">
+                    Course Completion Date 2:{" "}
+                  </label>
+                  <input
+                    type="text"
+                    id="courseCompletionDate2"
+                    name="courseCompletionDate2"
+                    value={formData.courseCompletionDate2}
+                    onChange={(courseCompletionDate2) =>
+                      setFormData({
+                        ...formData,
+                        courseCompletionDate2:
+                          courseCompletionDate2.target.value,
+                      })
+                    }
+                  ></input>
+                </li>
+              </div>
 
               <li>
                 <h3>CPD</h3>
