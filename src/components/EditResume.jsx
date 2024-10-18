@@ -182,29 +182,27 @@ export default function EditResume({ onNavigate }) {
               </li>
 
               <li>
-                <h3>Technology Stack</h3>
-                <label htmlFor="techStackProgrammingLanguages">
-                  Programming Languages:{" "}
-                </label>
-                <input
-                  type="text"
+              <h3>Technology Stack</h3>
+                    <label for="techStackProgrammingLanguages">Programming Languages: </label>
+                <textarea
                   id="techStackProgrammingLanguages"
                   name="techStackProgrammingLanguages"
                   value={formData.techStackProgrammingLanguages}
-                  onChange={(techStackProgrammingLanguages1) =>
+                  onChange={(techStackProgrammingLanguages) =>
                     setFormData({
                       ...formData,
-                      techStackProgrammingLanguages:
-                        techStackProgrammingLanguages1.target.value,
+                      techStackProgrammingLanguages: techStackProgrammingLanguages.target.value,
                     })
                   }
-                ></input>
+                  rows="5"
+                  cols="30"
+                ></textarea>
               </li>
 
-              <li>
-                <label htmlFor="techStackFrameWorks">Frame Works: </label>
-                <input
-                  type="text"
+
+<li>
+                    <label for="techStackFrameWorks">Frame Works: </label>
+                <textarea
                   id="techStackFrameWorks"
                   name="techStackFrameWorks"
                   value={formData.techStackFrameWorks}
@@ -214,7 +212,9 @@ export default function EditResume({ onNavigate }) {
                       techStackFrameWorks: techStackFrameWorks.target.value,
                     })
                   }
-                ></input>
+                  rows="5"
+                  cols="30"
+                ></textarea>
               </li>
 
               <li>
@@ -234,8 +234,8 @@ export default function EditResume({ onNavigate }) {
                 ></textarea>
               </li>
 
-              <li>
-                <label htmlFor="techStackDeveloperTools">Developer Tools</label>
+              {/* <li>
+                <label htmlFor=""></label>
                 <input
                   type="text"
                   id=""
@@ -248,26 +248,29 @@ export default function EditResume({ onNavigate }) {
                     })
                   }
                 ></input>
-              </li>
+              </li> */}
 
-              <li>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
+
+<li>
+                    <label for="techStackDeveloperTools">Developer Tools: </label>
+                <textarea
+                  id="techStackDeveloperTools"
+                  name="techStackDeveloperTools"
+                  value={formData.techStackDeveloperTools}
+                  onChange={(techStackDeveloperTools) =>
                     setFormData({
                       ...formData,
-                      nameOfValue: nameOfFormField.target.value,
+                      techStackDeveloperTools: techStackDeveloperTools.target.value,
                     })
                   }
-                ></input>
+                  rows="5"
+                  cols="30"
+                ></textarea>
               </li>
 
+
               <li>
-                <label for="techStackProgrammingConcepts">
+                <label htmlFor="techStackProgrammingConcepts">
                   Programming Concepts:{" "}
                 </label>
                 <textarea
@@ -287,34 +290,20 @@ export default function EditResume({ onNavigate }) {
               </li>
 
               <li>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
+                    <label for="techStackCloud">Cloud </label>
+                <textarea
+                  id="techStackCloud"
+                  name="techStackCloud"
+                  value={formData.techStackCloud}
+                  onChange={(techStackCloud) =>
                     setFormData({
                       ...formData,
-                      nameOfValue: nameOfFormField.target.value,
+                      techStackCloud: techStackCloud.target.value,
                     })
                   }
-                ></input>
-              </li>
-              <li>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
-                    setFormData({
-                      ...formData,
-                      nameOfValue: nameOfFormField.target.value,
-                    })
-                  }
-                ></input>
+                  rows="5"
+                  cols="30"
+                ></textarea>
               </li>
 
               <li>
@@ -333,6 +322,8 @@ export default function EditResume({ onNavigate }) {
                   }
                 ></input>
               </li>
+
+ 
 
               <li>
                 <h3>Education and Qualifications</h3>
