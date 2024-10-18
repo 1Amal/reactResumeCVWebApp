@@ -164,9 +164,9 @@ export default function EditResume({ onNavigate }) {
                 ></input>
               </li>
 
-              <li>
-                <h3>Professional Summary</h3>
-                <label htmlFor="profSummary"></label>
+              {/* <li>
+                
+                <label htmlFor=""></label>
                 <input
                   type="text"
                   id="profSummary"
@@ -179,11 +179,30 @@ export default function EditResume({ onNavigate }) {
                     })
                   }
                 ></input>
-              </li>
+              </li> */}
 
+<li>
+<h3>Professional Summary</h3>
+                <textarea
+                  id="profSummary"
+                  name="profSummary"
+                  value={formData.profSummary}
+                  onChange={(profSummary) =>
+                    setFormData({
+                      ...formData,
+                      profSummary: profSummary.target.value,
+                    })
+                  }
+                  rows="10"
+                  cols="30"
+                ></textarea>
+              </li>
+<div>
               <li>
-              <h3>Technology Stack</h3>
-                    <label for="techStackProgrammingLanguages">Programming Languages: </label>
+                <h3>Technology Stack</h3>
+                <label for="techStackProgrammingLanguages">
+                  Programming Languages:{" "}
+                </label>
                 <textarea
                   id="techStackProgrammingLanguages"
                   name="techStackProgrammingLanguages"
@@ -191,7 +210,8 @@ export default function EditResume({ onNavigate }) {
                   onChange={(techStackProgrammingLanguages) =>
                     setFormData({
                       ...formData,
-                      techStackProgrammingLanguages: techStackProgrammingLanguages.target.value,
+                      techStackProgrammingLanguages:
+                        techStackProgrammingLanguages.target.value,
                     })
                   }
                   rows="5"
@@ -199,9 +219,8 @@ export default function EditResume({ onNavigate }) {
                 ></textarea>
               </li>
 
-
-<li>
-                    <label for="techStackFrameWorks">Frame Works: </label>
+              <li>
+                <label for="techStackFrameWorks">Frame Works: </label>
                 <textarea
                   id="techStackFrameWorks"
                   name="techStackFrameWorks"
@@ -217,42 +236,10 @@ export default function EditResume({ onNavigate }) {
                 ></textarea>
               </li>
 
+
+
               <li>
-                <textarea
-                  id="techStackProgrammingConcepts"
-                  name="techStackProgrammingConcepts"
-                  value={formData.techStackProgrammingConcepts}
-                  onChange={(techStackProgrammingConcepts) =>
-                    setFormData({
-                      ...formData,
-                      techStackProgrammingConcepts:
-                        techStackProgrammingConcepts.target.value,
-                    })
-                  }
-                  rows="5"
-                  cols="30"
-                ></textarea>
-              </li>
-
-              {/* <li>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData.techStackDeveloperTools}
-                  onChange={(nameOfFormField) =>
-                    setFormData({
-                      ...formData,
-                      nameOfValue: nameOfFormField.target.value,
-                    })
-                  }
-                ></input>
-              </li> */}
-
-
-<li>
-                    <label for="techStackDeveloperTools">Developer Tools: </label>
+                <label for="techStackDeveloperTools">Developer Tools: </label>
                 <textarea
                   id="techStackDeveloperTools"
                   name="techStackDeveloperTools"
@@ -260,7 +247,8 @@ export default function EditResume({ onNavigate }) {
                   onChange={(techStackDeveloperTools) =>
                     setFormData({
                       ...formData,
-                      techStackDeveloperTools: techStackDeveloperTools.target.value,
+                      techStackDeveloperTools:
+                        techStackDeveloperTools.target.value,
                     })
                   }
                   rows="5"
@@ -268,11 +256,9 @@ export default function EditResume({ onNavigate }) {
                 ></textarea>
               </li>
 
-
               <li>
                 <label htmlFor="techStackProgrammingConcepts">
-                  Programming Concepts:{" "}
-                </label>
+                  Programming Concepts: </label>
                 <textarea
                   id="techStackProgrammingConcepts"
                   name="techStackProgrammingConcepts"
@@ -290,7 +276,7 @@ export default function EditResume({ onNavigate }) {
               </li>
 
               <li>
-                    <label for="techStackCloud">Cloud </label>
+                <label for="techStackCloud">Cloud: </label>
                 <textarea
                   id="techStackCloud"
                   name="techStackCloud"
@@ -305,25 +291,126 @@ export default function EditResume({ onNavigate }) {
                   cols="30"
                 ></textarea>
               </li>
-
+              </div>
+<div>
               <li>
                 <h3>Professional Experience</h3>
-                <label htmlFor=""></label>
+                <label htmlFor="jobTitle1">Job 1 - Title : </label>
                 <input
                   type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
+                  id="jobTitle1"
+                  name="jobTitle1"
+                  value={formData.jobTitle1}
+                  onChange={(jobTitle1) =>
                     setFormData({
                       ...formData,
-                      nameOfValue: nameOfFormField.target.value,
+                      jobTitle1: jobTitle1.target.value,
                     })
                   }
                 ></input>
               </li>
 
- 
+              <li>
+                <label htmlFor="jobCompanyName1">Job 1 - Company Name: </label>
+                <input
+                  type="text"
+                  id="jobCompanyName1"
+                  name="jobCompanyName1"
+                  value={formData.jobCompanyName1}
+                  onChange={(jobCompanyName1) =>
+                    setFormData({
+                      ...formData,
+                      jobCompanyName1: jobCompanyName1.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <label htmlFor="jobCompanyCity1">Job 1 - City: </label>
+                <input
+                  type="text"
+                  id="jobCompanyCity1"
+                  name="jobCompanyCity1"
+                  value={formData.jobCompanyCity1}
+                  onChange={(jobCompanyCity1) =>
+                    setFormData({
+                      ...formData,
+                      jobCompanyCity1: jobCompanyCity1.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <label htmlFor="jobStartDate1">Job 1 - Start Date: </label>
+                <input
+                  type="text"
+                  id="jobStartDate1"
+                  name="jobStartDate1"
+                  value={formData.jobStartDate1}
+                  onChange={(jobStartDate1) =>
+                    setFormData({
+                      ...formData,
+                      jobStartDate1: jobStartDate1.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                <label htmlFor="jobEndDate1">Job 1 - End Date: </label>
+                <input
+                  type="text"
+                  id="jobEndDate1"
+                  name="jobEndDate1"
+                  value={formData.jobEndDate1}
+                  onChange={(jobEndDate1) =>
+                    setFormData({
+                      ...formData,
+                      jobEndDate1: jobEndDate1.target.value,
+                    })
+                  }
+                ></input>
+              </li>
+
+              <li>
+                    <label for="jobResponsibilities1">Job 1 - Responsibilities: </label>
+                <textarea
+                  id="jobResponsibilities1"
+                  name="jobResponsibilities1"
+                  value={formData.jobResponsibilities1}
+                  onChange={(jobResponsibilities1) =>
+                    setFormData({
+                      ...formData,
+                      jobResponsibilities1: jobResponsibilities1.target.value,
+                    })
+                  }
+                  rows="5"
+                  cols="30"
+                ></textarea>
+              </li>
+
+              <li>
+                    <label for="jobAchievements1">Job 1 - Achievements: </label>
+                <textarea
+                  id="jobAchievements1"
+                  name="jobAchievements1"
+                  value={formData.jobAchievements1}
+                  onChange={(jobAchievements1) =>
+                    setFormData({
+                      ...formData,
+                      jobAchievements1: jobAchievements1.target.value,
+                    })
+                  }
+                  rows="5"
+                  cols="30"
+                ></textarea>
+              </li>
+
+
+
+              </div>
 
               <li>
                 <h3>Education and Qualifications</h3>
