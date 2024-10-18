@@ -22,27 +22,27 @@ export default function EditResume({ onNavigate }) {
     techStackProgrammingConcepts:
       "TDD | SOLID | DRY | OOP Principles | Clean Code | Unit Testing | WCAG",
     techStackCloud: "Vercel | Cloud Flare Pages | Netlify",
-    jobTitle1: "",
-    jobCompanyName1: "",
-    jobCompanyCity1: "",
-    jobStartDate1: "",
-    jobEndDate1: "",
-    jobResponsibilities1: "",
-    jobAchievements1: "",
-    jobTitle2: "",
-    jobCompanyName2: "",
-    jobCompanyCity2: "",
-    jobStartDate2: "",
-    jobEndDate2: "",
-    jobResponsibilities2: "",
-    jobAchievements2: "",
-    jobTitle3: "",
-    jobCompanyName3: "",
-    jobCompanyCity3: "",
-    jobStartDate3: "",
-    jobEndDate3: "",
-    jobResponsibilities3: "",
-    jobAchievements3: "",
+    jobTitle1: "Front End Developer",
+    jobCompanyName1: "Open Source",
+    jobCompanyCity1: "Melbourne",
+    jobStartDate1: "2020",
+    jobEndDate1: "Current",
+    jobResponsibilities1: "Develop React Open Source Projects",
+    jobAchievements1: "Created react based CV App",
+    jobTitle2: "Web Developer",
+    jobCompanyName2: "Various Freelance",
+    jobCompanyCity2: "Melbourne",
+    jobStartDate2: "2020",
+    jobEndDate2: "Current",
+    jobResponsibilities2: "Develop commercial websites",
+    jobAchievements2: "Built websites for several local businesses",
+    jobTitle3: "Software Engineer",
+    jobCompanyName3: "Various",
+    jobCompanyCity3: "Melbourne",
+    jobStartDate3: "2021",
+    jobEndDate3: "2023",
+    jobResponsibilities3: "Build custom web based software",
+    jobAchievements3: "Built several web based software for clients",
     courseName1: "Full Stack JavaScript",
     courseProvider1: "The Odin Project",
     courseDescription1: "JavaScript, CSS, HTML, Linux",
@@ -64,7 +64,7 @@ export default function EditResume({ onNavigate }) {
     <div>
       <ResumeDynamicView
         displayData={formData}
-        displayData2={callDisplayResume}
+        // displayData2={callDisplayResume}
       />
     </div>;
     // <ResumeDynamicView displayData={formData} />;
@@ -81,7 +81,6 @@ export default function EditResume({ onNavigate }) {
 
   return (
     <div>
-      <h1>{formData.fullName}</h1>
       <div>
         <h1>Edit Resume</h1>
         <>
@@ -200,7 +199,7 @@ export default function EditResume({ onNavigate }) {
               <div>
                 <li>
                   <h3>Technology Stack</h3>
-                  <label for="techStackProgrammingLanguages">
+                  <label htmlFor="techStackProgrammingLanguages">
                     Programming Languages:{" "}
                   </label>
                   <textarea
@@ -220,7 +219,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="techStackFrameWorks">Frame Works: </label>
+                  <label htmlFor="techStackFrameWorks">Frame Works: </label>
                   <textarea
                     id="techStackFrameWorks"
                     name="techStackFrameWorks"
@@ -237,7 +236,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="techStackDeveloperTools">Developer Tools: </label>
+                  <label htmlFor="techStackDeveloperTools">Developer Tools: </label>
                   <textarea
                     id="techStackDeveloperTools"
                     name="techStackDeveloperTools"
@@ -275,7 +274,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="techStackCloud">Cloud: </label>
+                  <label htmlFor="techStackCloud">Cloud: </label>
                   <textarea
                     id="techStackCloud"
                     name="techStackCloud"
@@ -376,7 +375,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="jobResponsibilities1">
+                  <label htmlFor="jobResponsibilities1">
                     Job 1 - Responsibilities:{" "}
                   </label>
                   <textarea
@@ -395,7 +394,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="jobAchievements1">Job 1 - Achievements: </label>
+                  <label htmlFor="jobAchievements1">Job 1 - Achievements: </label>
                   <textarea
                     id="jobAchievements1"
                     name="jobAchievements1"
@@ -495,7 +494,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="jobResponsibilities2">
+                  <label htmlFor="jobResponsibilities2">
                     Job 2 - Responsibilities:{" "}
                   </label>
                   <textarea
@@ -514,7 +513,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="jobAchievements2">Job 2 - Achievements: </label>
+                  <label htmlFor="jobAchievements2">Job 2 - Achievements: </label>
                   <textarea
                     id="jobAchievements2"
                     name="jobAchievements2"
@@ -615,7 +614,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="jobResponsibilities3">
+                  <label htmlFor="jobResponsibilities3">
                     Job 3 - Responsibilities:{" "}
                   </label>
                   <textarea
@@ -634,7 +633,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="jobAchievements3">Job 3 - Achievements: </label>
+                  <label htmlFor="jobAchievements3">Job 3 - Achievements: </label>
                   <textarea
                     id="jobAchievements3"
                     name="jobAchievements3"
@@ -685,7 +684,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="courseDescription1">Course Description 1: </label>
+                  <label htmlFor="courseDescription1">Course Description 1: </label>
                   <textarea
                     id="courseDescription1"
                     name=""
@@ -755,7 +754,7 @@ export default function EditResume({ onNavigate }) {
                 </li>
 
                 <li>
-                  <label for="courseDescription2">Course Description 2: </label>
+                  <label htmlFor="courseDescription2">Course Description 2: </label>
                   <textarea
                     id="courseDescription2"
                     name=""
@@ -791,39 +790,43 @@ export default function EditResume({ onNavigate }) {
                 </li>
               </div>
 
-              <li>
-                <h3>CPD</h3>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
-                    setFormData({
-                      ...formData,
-                      nameOfValue: nameOfFormField.target.value,
-                    })
-                  }
-                ></input>
-              </li>
-
-              <li>
+              <div>
                 <h3>References</h3>
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  value={formData}
-                  onChange={(nameOfFormField) =>
-                    setFormData({
-                      ...formData,
-                      nameOfValue: nameOfFormField.target.value,
-                    })
-                  }
-                ></input>
-              </li>
+
+                <li>
+                  <label htmlFor="refereeDetails1">Referee Details 1: </label>
+                  <textarea
+                    id="refereeDetails1"
+                    name="refereeDetails1"
+                    value={formData.refereeDetails1}
+                    onChange={(refereeDetails1) =>
+                      setFormData({
+                        ...formData,
+                        refereeDetails1: refereeDetails1.target.value,
+                      })
+                    }
+                    rows="5"
+                    cols="30"
+                  ></textarea>
+                </li>
+
+                <li>
+                  <label htmlFor="refereeDetails2">Referee Details 2: </label>
+                  <textarea
+                    id="refereeDetails2"
+                    name="refereeDetails2"
+                    value={formData.refereeDetails2}
+                    onChange={(refereeDetails2) =>
+                      setFormData({
+                        ...formData,
+                        refereeDetails2: refereeDetails2.target.value,
+                      })
+                    }
+                    rows="5"
+                    cols="30"
+                  ></textarea>
+                </li>
+              </div>
 
               <li>
                 <button type="submit" onClick={submitContactInfo}>
