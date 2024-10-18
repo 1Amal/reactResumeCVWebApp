@@ -13,7 +13,7 @@ export default function EditResume({ onNavigate }) {
     mobile: "0466222222",
     webSite: "www.1amal.github.io",
     location: "Melbourne",
-    profSummary: "Front End Engineer",
+    profSummary: "Front End Software Engineer with over two years of professional experience. Many software development projects can be found on the Github",
     techStackProgrammingLanguages:
       "JavaScript | CSS (Grid, FlexBox) | HTML | Bash",
     techStackFrameWorks: "React",
@@ -45,11 +45,11 @@ export default function EditResume({ onNavigate }) {
     jobAchievements3: "Built several web based software for clients",
     courseName1: "Full Stack JavaScript",
     courseProvider1: "The Odin Project",
-    courseDescription1: "JavaScript, CSS, HTML, Linux",
-    courseCompletionDate1: "Dec 2023",
+    courseDescription1: "JavaScript, React, Node.Js,PostgreSQL ",
+    courseCompletionDate1: "Dec 2024",
     courseName2: "Web Development Foundations",
     courseProvider2: "The Odin Project",
-    courseDescription2: "JavaScript, CSS, HTML, Linux",
+    courseDescription2: "JavaScript, CSS, HTML, Linux, Git",
     courseCompletionDate2: "Dec 2023",
     courseName3:
       "Bachelor of Engineering (Honours) Electronic, Telecommunications & Internet Engineering",
@@ -162,23 +162,6 @@ export default function EditResume({ onNavigate }) {
                   }
                 ></input>
               </li>
-
-              {/* <li>
-                
-                <label htmlFor=""></label>
-                <input
-                  type="text"
-                  id="profSummary"
-                  name="profSummary"
-                  value={formData.profSummary}
-                  onChange={(profSummary) =>
-                    setFormData({
-                      ...formData,
-                      profSummary: profSummary.target.value,
-                    })
-                  }
-                ></input>
-              </li> */}
 
               <li>
                 <h3>Professional Summary</h3>
@@ -849,6 +832,7 @@ export default function EditResume({ onNavigate }) {
         </>
       </div>
       <div>
+        <h1>Resume Preview</h1>
         <ResumeDynamicView displayData={formData} />
       </div>
       {/* <div><ResumeDynamicView displayData={submitContactInfo}/></div> */}
