@@ -2,25 +2,25 @@
 
 import { useState } from "react";
 
-export default function ResumeDynamicView({ displayData, displayData2 }) {
+export default function ResumeDynamicView({ onNavigate, displayData }) {
   console.log("ResumeDynamic displayData Output");
 
   console.dir(displayData);
 
-  const [displayData1, setDisplayData] = useState("test");
+  // const [displayData1, setDisplayData] = useState("test");
 
   if (displayData === undefined) {
     return <h1>No Display Data</h1>;
   } else {
     return (
       <>
-        <button
+        {/* <button
           onClick={() => {
             displayData2();
           }}
         >
           Update Display
-        </button>
+        </button> */}
 
         <div>
           <h1>{displayData.fullName}</h1>
@@ -74,8 +74,14 @@ export default function ResumeDynamicView({ displayData, displayData2 }) {
                 {displayData.jobEndDate1})
               </strong>
             </h3>
-            <p><strong>Responsibilities: </strong>{displayData.jobResponsibilities1}</p>
-            <p><strong>Achievements: </strong>{displayData.jobAchievements1}</p>
+            <p>
+              <strong>Responsibilities: </strong>
+              {displayData.jobResponsibilities1}
+            </p>
+            <p>
+              <strong>Achievements: </strong>
+              {displayData.jobAchievements1}
+            </p>
           </div>
 
           <div>
@@ -87,8 +93,14 @@ export default function ResumeDynamicView({ displayData, displayData2 }) {
                 {displayData.jobEndDate2})
               </strong>
             </h3>
-            <p><strong>Responsibilities: </strong>{displayData.jobResponsibilities2}</p>
-            <p><strong>Achievements: </strong>{displayData.jobAchievements2}</p>
+            <p>
+              <strong>Responsibilities: </strong>
+              {displayData.jobResponsibilities2}
+            </p>
+            <p>
+              <strong>Achievements: </strong>
+              {displayData.jobAchievements2}
+            </p>
           </div>
 
           <div>
@@ -100,13 +112,16 @@ export default function ResumeDynamicView({ displayData, displayData2 }) {
                 {displayData.jobEndDate3})
               </strong>
             </h3>
-            <p><strong>Responsibilities: </strong>{displayData.jobResponsibilities3}</p>
-            <p><strong>Achievements: </strong>{displayData.jobAchievements3}</p>
+            <p>
+              <strong>Responsibilities: </strong>
+              {displayData.jobResponsibilities3}
+            </p>
+            <p>
+              <strong>Achievements: </strong>
+              {displayData.jobAchievements3}
+            </p>
           </div>
- 
         </div>
-
-        
 
         <div>
           <h2>Education and Qualifications</h2>
