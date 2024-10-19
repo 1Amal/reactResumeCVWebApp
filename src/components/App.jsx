@@ -10,8 +10,6 @@ import ResumeDynamicView from "./ResumeDynamicView.jsx";
 function App() {
   const [currentView, setCurrentView] = useState("Welcome");
 
-  const [dataObject, setDataObject] = useState("Hello Data Object");
-
   const [formData, setFormData] = useState({
     fullName: "Amal K.",
     eMail: "amal@amal.com",

@@ -40,24 +40,6 @@ body {
   min-height: 100vh;
 }
 
-form {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-
-  align-items: center;
-}
-
-form label {
-  justify-content: space-between;
-  margin: 5px;
-}
-
-form input {
-  justify-content: flex-end;
-  margin: 5px;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -93,4 +75,30 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.printPage {
+  background-color: #f9f9f9;
+  color: #6f76cf;
+}
+
+.editResumeButtons {
+  background-color: #000000;
+  color: #ff9100;
+  margin: 5px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.form-group input {
+  flex: 1;
 }

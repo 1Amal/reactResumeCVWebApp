@@ -13,9 +13,16 @@ export default function DisplayResume({ onNavigate, displayData }) {
       {console.dir(displayData)}
 
       <ResumeDynamicView displayData={displayData} />
-
-      <button onClick={() => onNavigate("EditResume")}>Edit Resume</button>
-      <button onClick={() => onNavigate("Welcome")}>Start Again</button>
+      <div className="printPage"></div>
+      <button className="printPage" onClick={() => onNavigate("EditResume")}>
+        Edit Resume
+      </button>
+      <button className="printPage" onClick={() => onNavigate("Welcome")}>
+        Start Again
+      </button>
+      <button className="printPage" onClick={window.print}>
+        Print Resume
+      </button>
     </>
   );
 }

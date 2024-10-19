@@ -25,6 +25,25 @@ export default function Welcome({ onNavigate }) {
       </div>
       <div>
         <h1>Project Info</h1>
+        <ol>
+          <li>
+            Input Forms: Users can fill out personal details, work experience,
+            education, and skills.
+          </li>
+          <li>Responsive: Works on desktop, tablet, and mobile devices.</li>
+          <li>
+            Printable: Users can print the final document to paper or to PDF
+          </li>
+        </ol>
+
+        <h2>Tech Stack</h2>
+        <ul>
+          <li>
+            React / JavaScript (ES6+) (Functional Components, State and Hooks)
+          </li>
+          <li>HTML5 & CSS3</li>
+          <li>Hosting: Netlify | Vercel | Cloudflare </li>
+        </ul>
         <h2>Live Demo</h2>
         <p>You can access this App from three different hosting providers</p>
         <p>

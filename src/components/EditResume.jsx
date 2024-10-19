@@ -22,110 +22,130 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
     return (
       <div>
         <div>
-          <h1>Edit Resume</h1>
+          <h1>Edit Resume/CV Instructions</h1>
+
+          <ol>
+            <li>
+              To create your resume, simply fill in the relevant details in the
+              form fields.
+            </li>
+            <li>Scroll down to see a live preview of your current data.</li>
+            <li>
+              Once you've entered all the information, click the View Completed
+              Resume button to generate your resume.{" "}
+            </li>
+            <li>
+              You can then use the browser's print to PDF option (CTRL+P) or
+              print directly.
+            </li>
+          </ol>
           <>
             <form onSubmit={submitContactInfo}>
               <ul>
                 <div>
-                <li>
                   <h3>Contact Info</h3>
-                  <label htmlFor="fullName">Full Name: </label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={(setFullName) =>
-                      setFormData({
-                        ...formData,
-                        fullName: setFullName.target.value,
-                      })
-                    }
-                  ></input>
-                </li>
-                <li>
-                  <label htmlFor="email">E-mail: </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.eMail}
-                    onChange={(setEmail) =>
-                      setFormData({ ...formData, eMail: setEmail.target.value })
-                    }
-                  ></input>
-                </li>
-                <li>
-                  <label htmlFor="phone">Phone: </label>
-                  <input
-                    type="number"
-                    id="phone"
-                    name="phone"
-                    value={formData.mobile}
-                    onChange={(setPhoneNo) =>
-                      setFormData({
-                        ...formData,
-                        mobile: setPhoneNo.target.value,
-                      })
-                    }
-                  ></input>
-                </li>
+                  <li className="form-group">
+                    <label htmlFor="fullName">Full Name: </label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={(setFullName) =>
+                        setFormData({
+                          ...formData,
+                          fullName: setFullName.target.value,
+                        })
+                      }
+                    ></input>
+                  </li>
+                  <li className="form-group">
+                    <label htmlFor="email">E-mail: </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.eMail}
+                      onChange={(setEmail) =>
+                        setFormData({
+                          ...formData,
+                          eMail: setEmail.target.value,
+                        })
+                      }
+                    ></input>
+                  </li>
+                  <li className="form-group">
+                    <label htmlFor="phone">Phone: </label>
+                    <input
+                      type="number"
+                      id="phone"
+                      name="phone"
+                      value={formData.mobile}
+                      onChange={(setPhoneNo) =>
+                        setFormData({
+                          ...formData,
+                          mobile: setPhoneNo.target.value,
+                        })
+                      }
+                    ></input>
+                  </li>
 
-                <li>
-                  <label htmlFor="website">Website: </label>
-                  <input
-                    type="text"
-                    id="website"
-                    name="website"
-                    value={formData.webSite}
-                    // onFocus={this.target.value = ""}
-                    onChange={(setWebSite) =>
-                      setFormData({
-                        ...formData,
-                        webSite: setWebSite.target.value,
-                      })
-                    }
-                  ></input>
-                </li>
+                  <li className="form-group">
+                    <label htmlFor="website">Website: </label>
+                    <input
+                      type="text"
+                      id="website"
+                      name="website"
+                      value={formData.webSite}
+                      // onFocus={this.target.value = ""}
+                      onChange={(setWebSite) =>
+                        setFormData({
+                          ...formData,
+                          webSite: setWebSite.target.value,
+                        })
+                      }
+                    ></input>
+                  </li>
 
-                <li>
-                  <label htmlFor="location">Location: </label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    value={formData.location}
-                    onChange={(location) =>
-                      setFormData({
-                        ...formData,
-                        location: location.target.value,
-                      })
-                    }
-                  ></input>
-                </li>
+                  <li className="form-group">
+                    <label htmlFor="location">Location: </label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      value={formData.location}
+                      onChange={(location) =>
+                        setFormData({
+                          ...formData,
+                          location: location.target.value,
+                        })
+                      }
+                    ></input>
+                  </li>
                 </div>
 
                 <div>
-                <li>
                   <h3>Professional Summary</h3>
-                  <textarea
-                    id="profSummary"
-                    name="profSummary"
-                    value={formData.profSummary}
-                    onChange={(profSummary) =>
-                      setFormData({
-                        ...formData,
-                        profSummary: profSummary.target.value,
-                      })
-                    }
-                    rows="10"
-                    cols="30"
-                  ></textarea>
-                </li>
+                  <li className="form-group">
+                    <label htmlFor="profSummary">Professional Summary: </label>
+                    <textarea
+                      id="profSummary"
+                      name="profSummary"
+                      value={formData.profSummary}
+                      onChange={(profSummary) =>
+                        setFormData({
+                          ...formData,
+                          profSummary: profSummary.target.value,
+                        })
+                      }
+                      rows="10"
+                      cols="30"
+                    ></textarea>
+                  </li>
                 </div>
                 <div>
-                  <li>
-                    <h3>Technology Stack</h3>
+                  <h3>Technology Stack</h3>
+                  <li className="form-group">
                     <label htmlFor="techStackProgrammingLanguages">
                       Programming Languages:{" "}
                     </label>
@@ -145,7 +165,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="techStackFrameWorks">Frame Works: </label>
                     <textarea
                       id="techStackFrameWorks"
@@ -162,7 +182,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="techStackDeveloperTools">
                       Developer Tools:{" "}
                     </label>
@@ -182,7 +202,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="techStackProgrammingConcepts">
                       Programming Concepts:{" "}
                     </label>
@@ -202,7 +222,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="techStackCloud">Cloud: </label>
                     <textarea
                       id="techStackCloud"
@@ -220,8 +240,8 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                   </li>
                 </div>
                 <div>
-                  <li>
-                    <h3>Professional Experience</h3>
+                  <h3>Professional Experience</h3>
+                  <li className="form-group">
                     <label htmlFor="jobTitle1">Job 1 - Title : </label>
                     <input
                       type="text"
@@ -237,7 +257,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobCompanyName1">
                       Job 1 - Company Name:{" "}
                     </label>
@@ -255,7 +275,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobCompanyCity1">Job 1 - City: </label>
                     <input
                       type="text"
@@ -271,7 +291,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobStartDate1">Job 1 - Start Date: </label>
                     <input
                       type="text"
@@ -287,7 +307,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobEndDate1">Job 1 - End Date: </label>
                     <input
                       type="text"
@@ -303,7 +323,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobResponsibilities1">
                       Job 1 - Responsibilities:{" "}
                     </label>
@@ -323,7 +343,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobAchievements1">
                       Job 1 - Achievements:{" "}
                     </label>
@@ -343,7 +363,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                   </li>
                 </div>
                 <div>
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobTitle2">Job 2 - Title : </label>
                     <input
                       type="text"
@@ -359,7 +379,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobCompanyName2">
                       Job 2 - Company Name:{" "}
                     </label>
@@ -377,7 +397,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobCompanyCity2">Job 2 - City: </label>
                     <input
                       type="text"
@@ -393,7 +413,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobStartDate2">Job 2 - Start Date: </label>
                     <input
                       type="text"
@@ -409,14 +429,14 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobEndDate2">Job 2 - End Date: </label>
                     <input
                       type="text"
                       id="jobEndDate2"
                       name="jobEndDate2"
                       value={formData.jobEndDate2}
-                      onChange={(jobEndDate1) =>
+                      onChange={(jobEndDate2) =>
                         setFormData({
                           ...formData,
                           jobEndDate2: jobEndDate2.target.value,
@@ -425,7 +445,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobResponsibilities2">
                       Job 2 - Responsibilities:{" "}
                     </label>
@@ -445,7 +465,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobAchievements2">
                       Job 2 - Achievements:{" "}
                     </label>
@@ -466,7 +486,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                 </div>
 
                 <div>
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobTitle3">Job 3 - Title : </label>
                     <input
                       type="text"
@@ -482,7 +502,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobCompanyName3">
                       Job 3 - Company Name:{" "}
                     </label>
@@ -500,7 +520,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobCompanyCity3">Job 3 - City: </label>
                     <input
                       type="text"
@@ -516,7 +536,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobStartDate3">Job 3 - Start Date: </label>
                     <input
                       type="text"
@@ -532,7 +552,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobEndDate3">Job 3 - End Date: </label>
                     <input
                       type="text"
@@ -548,7 +568,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobResponsibilities3">
                       Job 3 - Responsibilities:{" "}
                     </label>
@@ -568,7 +588,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="jobAchievements3">
                       Job 3 - Achievements:{" "}
                     </label>
@@ -588,8 +608,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                   </li>
                 </div>
                 <div>
-                  <li>
-                    <h3>Education and Qualifications</h3>
+                  <li className="form-group">
                     <label htmlFor="courseName1">Course Name 1: </label>
                     <input
                       type="text"
@@ -605,7 +624,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseProvider1">Course Provider 1: </label>
                     <input
                       type="text"
@@ -621,7 +640,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseDescription1">
                       Course Description 1:{" "}
                     </label>
@@ -640,7 +659,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseCompletionDate1">
                       Course Completion Date 1:{" "}
                     </label>
@@ -661,7 +680,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                 </div>
 
                 <div>
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseName2">Course Name 2: </label>
                     <input
                       type="text"
@@ -677,7 +696,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseProvider2">Course Provider 2: </label>
                     <input
                       type="text"
@@ -693,7 +712,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></input>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseDescription2">
                       Course Description 2:{" "}
                     </label>
@@ -712,7 +731,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="courseCompletionDate2">
                       Course Completion Date 2:{" "}
                     </label>
@@ -735,7 +754,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                 <div>
                   <h3>References</h3>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="refereeDetails1">Referee Details 1: </label>
                     <textarea
                       id="refereeDetails1"
@@ -752,7 +771,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
 
-                  <li>
+                  <li className="form-group">
                     <label htmlFor="refereeDetails2">Referee Details 2: </label>
                     <textarea
                       id="refereeDetails2"
@@ -769,15 +788,23 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
                 </div>
-<div>
-                <li>
-                  <button type="submit" onClick={submitContactInfo}>
-                    View Completed Resume
-                  </button>
-                  <button type="button" onClick={() => onNavigate("Welcome")}>
-                    Start Again
-                  </button>
-                </li>
+                <div>
+                  <li className="form-group">
+                    <button
+                      className="editResumeButtons"
+                      type="submit"
+                      onClick={submitContactInfo}
+                    >
+                      View Completed Resume
+                    </button>
+                    <button
+                      className="editResumeButtons"
+                      type="button"
+                      onClick={() => onNavigate("Welcome")}
+                    >
+                      Start Again
+                    </button>
+                  </li>
                 </div>
               </ul>
             </form>
