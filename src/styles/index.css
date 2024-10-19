@@ -40,6 +40,24 @@ body {
   min-height: 100vh;
 }
 
+form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  align-items: center;
+}
+
+form label {
+  justify-content: space-between;
+  margin: 5px;
+}
+
+form input {
+  justify-content: flex-end;
+  margin: 5px;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

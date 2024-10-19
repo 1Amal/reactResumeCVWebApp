@@ -26,6 +26,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
           <>
             <form onSubmit={submitContactInfo}>
               <ul>
+                <div>
                 <li>
                   <h3>Contact Info</h3>
                   <label htmlFor="fullName">Full Name: </label>
@@ -102,7 +103,9 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     }
                   ></input>
                 </li>
+                </div>
 
+                <div>
                 <li>
                   <h3>Professional Summary</h3>
                   <textarea
@@ -119,6 +122,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     cols="30"
                   ></textarea>
                 </li>
+                </div>
                 <div>
                   <li>
                     <h3>Technology Stack</h3>
@@ -765,7 +769,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     ></textarea>
                   </li>
                 </div>
-
+<div>
                 <li>
                   <button type="submit" onClick={submitContactInfo}>
                     View Completed Resume
@@ -774,6 +778,7 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
                     Start Again
                   </button>
                 </li>
+                </div>
               </ul>
             </form>
           </>
