@@ -27,7 +27,8 @@ export default function EditResume({ onNavigate, formData, setFormData }) {
           <ol>
             <li>
               To create your resume, simply fill in the relevant details in the
-              form fields.
+              form fields. Form fields are filled with sample data, remember to
+              delete them before entering your information.
             </li>
             <li>Scroll down to see a live preview of your current data.</li>
             <li>

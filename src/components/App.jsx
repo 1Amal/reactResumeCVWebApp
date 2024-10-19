@@ -3,9 +3,9 @@ import { useState } from "react";
 import Welcome from "./Welcome.jsx";
 import EditResume from "./EditResume.jsx";
 import DisplayResume from "./DisplayResume.jsx";
+import ResumeDynamicView from "./ResumeDynamicView.jsx";
 
 import "../styles/App.css";
-import ResumeDynamicView from "./ResumeDynamicView.jsx";
 
 function App() {
   const [currentView, setCurrentView] = useState("Welcome");
@@ -17,7 +17,7 @@ function App() {
     webSite: "www.1amal.github.io",
     location: "Melbourne",
     profSummary:
-      "Front End Software Engineer with over two years of professional experience. Many software development projects can be found on the Github",
+      "Front End Software Engineer with over two years of professional experience, specializing in user-friendly web applications, with numerous projects available on my GitHub.",
     techStackProgrammingLanguages:
       "JavaScript | CSS (Grid, FlexBox) | HTML | Bash",
     techStackFrameWorks: "React",
@@ -27,25 +27,26 @@ function App() {
       "TDD | SOLID | DRY | OOP Principles | Clean Code | Unit Testing | WCAG",
     techStackCloud: "Vercel | Cloud Flare Pages | Netlify",
     jobTitle1: "Front End Developer",
-    jobCompanyName1: "Open Source",
+    jobCompanyName1: "Amal Develops",
     jobCompanyCity1: "Melbourne",
-    jobStartDate1: "2020",
+    jobStartDate1: "2021",
     jobEndDate1: "Current",
     jobResponsibilities1: "Develop React Open Source Projects",
-    jobAchievements1: "Created react based CV App",
+    jobAchievements1: "Created react based Resume/CV App",
     jobTitle2: "Web Developer",
-    jobCompanyName2: "Various Freelance",
+    jobCompanyName2: "AgileSoft",
     jobCompanyCity2: "Melbourne",
-    jobStartDate2: "2020",
-    jobEndDate2: "Current",
+    jobStartDate2: "2021",
+    jobEndDate2: "2022",
     jobResponsibilities2: "Develop commercial websites",
     jobAchievements2: "Built websites for several local businesses",
-    jobTitle3: "Software Engineer",
-    jobCompanyName3: "Various",
+    jobTitle3: "Electronic Engineer",
+    jobCompanyName3: "Freelance",
     jobCompanyCity3: "Melbourne",
-    jobStartDate3: "2021",
-    jobEndDate3: "2023",
-    jobResponsibilities3: "Build custom web based software",
+    jobStartDate3: "2018",
+    jobEndDate3: "2020",
+    jobResponsibilities3:
+      "Build custom web based software and Electronic projects",
     jobAchievements3: "Built several web based software for clients",
     courseName1: "Full Stack JavaScript",
     courseProvider1: "The Odin Project",
